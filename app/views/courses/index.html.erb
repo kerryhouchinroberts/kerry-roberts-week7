@@ -17,7 +17,7 @@
     <tr>
       <td><%= link_to course.title, course %></td>
       <td><%= human_boolean(course.day_night) %></td>
-      <td><%= link_to 'Delete', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Delete Course', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </tbody>
