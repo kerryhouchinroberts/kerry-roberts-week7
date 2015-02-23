@@ -8,6 +8,16 @@
 </head>
 <body>
 
+  <div>
+    <% if current_user %>
+      <%= link_to "Sign Out", signout_path %>
+    <% else %>
+      <%= link_to "Sign Up", signup_path %>
+      |
+      <%= link_to "Sign In", signin_path %>
+    <% end %>
+  </div>
+
 <%= yield %>
 
 </body>
