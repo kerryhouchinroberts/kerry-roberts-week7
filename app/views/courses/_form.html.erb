@@ -1,0 +1,15 @@
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
+<%= form_for @course do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<br/>
+<%= f.label :day_night, "Day" %>
+<%= f.radio_button :day_night, true %>
+<%= f.label :day_night, "Night" %>
+<%= f.radio_button :day_night, false %>
+<br />
+<%= f.submit %>
+<% end %>
