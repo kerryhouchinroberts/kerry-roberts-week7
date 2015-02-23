@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       redirect_to users_path, notice: 'User was successfully created'
     else
       flash.now[:alert] = @user.errors.full_messages
-      render :edit
+      render :new
     end
   end
 
