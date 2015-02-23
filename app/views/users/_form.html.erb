@@ -1,0 +1,18 @@
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
+<%= form_for @user do |f| %>
+<%= f.label :user_name %>
+<%= f.text_field :user_name %>
+<br />
+<%= f.label :about %>
+<%= f.text_field :about%>
+<br />
+<% if @user.id == nil %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+<% end %>
+<br />
+<%= f.submit %>
+<% end %>
