@@ -1,0 +1,23 @@
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
+<h1>All Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User Name</th>
+      <th>About</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to user.user_name, user %></td>
+        <td><%= user.about %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
